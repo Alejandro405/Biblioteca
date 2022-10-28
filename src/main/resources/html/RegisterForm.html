@@ -5,6 +5,26 @@
     <title>Title</title>
 </head>
 <body>
+    <div style="text-align: center;">
+        <img src="pict1.png">
+    </div>
+    <div>
+        <div >
+            <h2>Register</h2>
+        </div>
 
+        <FORM METHOD="POST" ACTION="http://localhost:8080/Biblioteca_war_exploded/register">
+            Usuario<b>*</b>: <INPUT TYPE="text" NAME="nick" size=25>  <br>
+            Contraseña<b>*</b>: <INPUT TYPE="password" NAME="pass" size=10 > <br>
+            Nombre: <INPUT TYPE="text" NAME="nombre" size=25>  <br>
+            Rol: <SELECT NAME="rol"><OPTION SELECTED>Estudiante<option>Docente<option>Divulgador</select><p>
+
+            <div style="text-align: center;">
+                <input type="submit" name="Enviar" value=Enviar>
+            </div>
+
+
+        </FORM>
+    </div>
 </body>
 </html>

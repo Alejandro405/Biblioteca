@@ -6,9 +6,10 @@
 </head>
 <body>
     <h1>
-        <%= "Bienvenido al catálogo de nuestra biblioteca digital" %>
+        <%= "Bienvenido al catálogo de la biblioteca digital DST" %>
     </h1>
     <br/>
-    <a href="hello-servlet">Hello Servlet</a>
+    <a href="login">Login</a>
+    <a href="register">Register</a>
 </body>
 </html>

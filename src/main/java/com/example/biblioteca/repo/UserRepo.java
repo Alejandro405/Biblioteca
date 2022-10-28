@@ -41,13 +41,24 @@ public class UserRepo {
         addUser(new Usuario(name, pass));
     }
 
-    public void addUser(Usuario newUser) throws DuplicatedUserException {
-        if (usuariosApp.contains(newUser))
-            throw new DuplicatedUserException("[ERROR] El usuario indicado ya pertenece al sistema");
+    public void addUser(Usuario newUser)  {
+        //if (usuariosApp.contains(newUser))
+          //  throw new DuplicatedUserException("[ERROR] El usuario indicado ya pertenece al sistema");
 
         usuariosApp.add(newUser);
 
         // Actualizar fichero (opcional)
     }
 
+    public Usuario get(String nick) {
+        return usuariosApp.get(usuariosApp.indexOf(new Usuario(nick)));
+    }
+
+    public boolean contains(Usuario usuario) {
+        return usuariosApp.contains(usuario);
+    }
+
+    public boolean contains(String nick) {
+        return contains(new Usuario(nick));
+    }
 }

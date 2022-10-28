@@ -6,12 +6,27 @@ public class Usuario {
     private String userName;
     private String pass;
 
+    private String nombre;
+
+    private String rol;
+
+    public Usuario(String userName, String pass, String nombre, String rol) {
+        this.userName = userName;
+        this.pass = pass;
+        this.nombre = nombre;
+        this.rol = rol;
+    }
+
     public Usuario(String userName, String pass) {
         this.userName = userName;
         this.pass = pass;
     }
 
     public Usuario() {
+    }
+
+    public Usuario(String nick) {
+        this.nombre = nick;
     }
 
     public String getUserName() {

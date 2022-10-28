@@ -64,6 +64,16 @@ public class Libro {
     }
 
     @Override
+    public String toString() {
+        return "Libro{" +
+                "titulo='" + titulo + '\'' +
+                ", autor='" + autor + '\'' +
+                ", file='" + file + '\'' +
+                ", resumen='" + resumen + '\'' +
+                '}';
+    }
+
+    @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof Libro)) return false;
