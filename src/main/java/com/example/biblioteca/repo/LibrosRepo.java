@@ -9,21 +9,23 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 public class LibrosRepo {
-    private static File libros = new File(
-            System.getProperty("user.fir") + "/src/main/java/com/example/biblioteca/repo/libros.txt"
-    );
+    private static File libros = new File("C:\\Users\\Usuario\\IdeaProjects\\Biblioteca\\src\\main\\java\\com\\example\\biblioteca\\repo\\libros.txt");
 
-    private static List<Libro> librosApp = initLibros();
+    private final Set<Libro> librosApp;
 
-    private static List<Libro> initLibros() {
-        List<Libro> res = null;
+    public LibrosRepo() {
+        this.librosApp = initLibros();
+    }
+
+    private static Set<Libro> initLibros() {
+        Set<Libro> res = null;
 
         try {
-            res = Arrays.stream(Files.readString(libros.toPath())
-                    .split("\n.\n"))
+            res = Arrays.stream(Files.readString(libros.toPath()).split("\r\n" +".\r\n"))
                     .map(x -> {
                             Libro aux = null;
                             try {
@@ -33,7 +35,7 @@ public class LibrosRepo {
                             }
                             return aux;
                         })
-                    .collect(Collectors.toList());
+                    .collect(Collectors.toSet());
 
         } catch (IOException e) {
             throw new RuntimeException(e);
@@ -43,5 +45,7 @@ public class LibrosRepo {
         return res;
     }
 
-
+    public Set<Libro> getLibros() {
+        return librosApp;
+    }
 }

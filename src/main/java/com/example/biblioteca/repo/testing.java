@@ -14,6 +14,11 @@ public class testing {
 
 
     public static void main(String[] args) throws IOException {
+        File asdf = new File("C:\\Users\\Usuario\\IdeaProjects\\Biblioteca\\src\\main\\resources\\html\\files\\downloads");
+
+
+        System.out.println(asdf.toPath() + "\\" + "titulo1.txt");
+
         /*
         File usuarios = new File(
                 System.getProperty("user.dir")
@@ -39,14 +44,14 @@ public class testing {
 
         System.out.println(Files.readString(html.toPath()));*/
 
+        /*
         File libros = new File(System.getProperty("user.dir") + "/src/main/java/com/example/biblioteca/repo/libros.txt");
 
         List<Libro> res = null;
 
         try {
 
-            res = Arrays.stream(Files.readString(libros.toPath())
-                    .split("\r\n" +".\r\n"))
+            res = Arrays.stream(Files.readString(libros.toPath()).split("\r\n" +".\r\n"))
                     .map(x -> {
                             Libro aux = null;
                             try {
@@ -64,6 +69,9 @@ public class testing {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+         */
+
+
 
     }
 }

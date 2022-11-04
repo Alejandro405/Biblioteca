@@ -9,11 +9,10 @@ import javax.servlet.annotation.*;
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
-import java.util.Arrays;
 
 @WebServlet(name = "LoginServlet", value = "/login")
 public class LoginServlet extends HttpServlet {
-    private UserRepo userRepo;
+    //private final UserRepo userRepo = new UserRepo();
     /**
      * Presentar la página de login al cliente
      * @param request Peticion de aceso
@@ -34,13 +33,22 @@ public class LoginServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String usuario = Arrays.toString(request.getParameterValues("nombre"));
-        String pass = Arrays.toString(request.getParameterValues("pass"));
+        response.setContentType("text/html");
+        response.setCharacterEncoding("utf-8");
+
+        UserRepo userRepo = new UserRepo();
+        String usuario = request.getParameter("nombre");//Arrays.toString(request.getParameterValues("nombre"));
+        String pass = request.getParameter("pass");//Arrays.toString(request.getParameterValues("pass"));
         File htmlCatalogo = new File(request.getServletContext().getRealPath("./WEB-INF/classes/html/CatalogoLogged.html"));
 
-        if (userRepo.get(usuario).equals(new Usuario(usuario, pass))){
-            response.getWriter().print(Files.readString(htmlCatalogo.toPath()));
-        } else{
+        try {
+            if (userRepo.get(usuario).equals(new Usuario(usuario, pass))){
+                request.getSession(true).setAttribute("logg", "TRUE");
+                request.getRequestDispatcher("catalogo").forward(request, response);
+
+                //response.getWriter().print(Files.readString(htmlCatalogo.toPath()));
+            }
+        } catch (NullPointerException e) {
             response.getWriter().print(Files.readString(htmlCatalogo.toPath()) + "\n<p style=\"color:#FF0000\";>Datos incorrectos</p>");
         }
     }

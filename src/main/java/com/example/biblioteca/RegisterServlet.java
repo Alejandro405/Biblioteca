@@ -13,7 +13,7 @@ import java.util.Arrays;
 
 @WebServlet(name = "RegisterServlet", value = "/register")
 public class RegisterServlet extends HttpServlet {
-    private static UserRepo userRepo;
+    private static UserRepo userRepo = new UserRepo();
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("text/html");
@@ -27,14 +27,14 @@ public class RegisterServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String nick = Arrays.toString(request.getParameterValues("nick"));
-        String pass = Arrays.toString(request.getParameterValues("pass"));
+        String nick = request.getParameter("nick");
+        String pass = request.getParameter("pass");
         String nombre = Arrays.toString(request.getParameterValues("nombre"));
         String rol = Arrays.toString(request.getParameterValues("rol"));
         response.setContentType("text/html");
         response.setCharacterEncoding("utf-8");
         File htmlReg = new File(
-                request.getServletContext().getRealPath("./WEB-INF/classes/html/RegisterForm.html")
+                request.getServletContext().getRealPath("./WEB-INF/classes/html/LoginForm.html")
         );
 
 
@@ -45,6 +45,7 @@ public class RegisterServlet extends HttpServlet {
         } else {
             response.getWriter().print(Files.readString(htmlReg.toPath()));
             userRepo.addUser(new Usuario(nick, pass, nombre, rol));
+            userRepo.saveUsers();
         }
     }
 }
