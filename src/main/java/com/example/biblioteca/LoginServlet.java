@@ -15,7 +15,7 @@ public class LoginServlet extends HttpServlet {
     //private final UserRepo userRepo = new UserRepo();
     /**
      * Presentar la página de login al cliente
-     * @param request Peticion de aceso
+     * @param request Petici'on de aceso
      * @param response Contenedor donde volcar la página HTML
      * @throws ServletException
      * @throws IOException

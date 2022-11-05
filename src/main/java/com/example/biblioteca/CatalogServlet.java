@@ -68,27 +68,73 @@ public class CatalogServlet extends HttpServlet {
         try (PrintWriter out = response.getWriter()){
             LibrosRepo librosRepo = new LibrosRepo();
             out.print(
-                    "<!DOCTYPE html>\n" +
-                            "<html lang=\"en\">\n" +
-                            "<head>\n" +
-                            "    <meta charset=\"UTF-8\">\n" +
-                            "    <title>Title</title>\n" +
-                            "</head>\n" +
-                            "<body>\n" +
-                            "    <h1>Catálogo Digital</h1>\n"
+                    "<!Doctype Html>\n" +
+                    "<html lang=\"en\">\n" +
+                    "<Head>\n" +
+                    "  <meta charset=\"UTF-8\">\n" +
+                    "  <Title>\n" +
+                    "    Make a Navigation Bar\n" +
+                    "  </Title>\n" +
+                    "\n" +
+                    "  <style type=text/css>\n" +
+                    "    body\n" +
+                    "    {\n" +
+                    "      height: 125vh;\n" +
+                    "      margin-top: 80px;\n" +
+                    "      padding: 30px;\n" +
+                    "      background-size: cover;\n" +
+                    "      font-family: sans-serif;\n" +
+                    "    }\n" +
+                    "    header {\n" +
+                    "      background-color: orange;\n" +
+                    "      position: fixed;\n" +
+                    "      left: 0;\n" +
+                    "      right: 0;\n" +
+                    "      top: 5px;\n" +
+                    "      height: 30px;\n" +
+                    "      display: flex;\n" +
+                    "      align-items: center;\n" +
+                    "      box-shadow: 0 0 25px 0 black;\n" +
+                    "    }\n" +
+                    "    header * {\n" +
+                    "      display: inline;\n" +
+                    "    }\n" +
+                    "    header li {\n" +
+                    "      margin: 20px;\n" +
+                    "    }\n" +
+                    "    header li a {\n" +
+                    "      color: blue;\n" +
+                    "      text-decoration: none;\n" +
+                    "    }\n" +
+                    "  </style>\n" +
+                    "</Head>\n" +
+                    "<Body>\n" +
+                    "  <header>\n" +
+                    "    <nav>\n" +
+                    "      <ul>\n" +
+                    "        <li>\n" +
+                    "          <p>Usuario: Franco\n" +
+                    "        </li>\n" +
+                    "        <li>\n" +
+                    "          <a href=\"logout\"> Log-out </a>\n" +
+                    "        </li>\n" +
+                    "      </ul>\n" +
+                    "    </nav>\n" +
+                    "  </header>" +
+                    "<h1>Catálogo Digital</h1>"
             );
 
             for (Libro x : librosRepo.getLibros()) {
                 out.print(
                         "<div>\n" +
-                                "        <h2>" + x.getTitulo() + "</h2>\n" +
-                                "        <p>\n" +
-                                "            <ul>\n" +
-                                "                <li>" + x.getAutor() + "</li>\n" +
-                                "                <li>" + x.getResumen() + "Titulo</li>\n" +
-                                "                <li><A HREF=\"" + request.getServletContext().getRealPath("./files/downloads/" + x.getFile()) +"\">Descarga</a>" +
-                                "            </ul>\n" +
-                                "</div>"
+                        "        <h2>" + x.getTitulo() + "</h2>\n" +
+                        "        <p>\n" +
+                        "            <ul>\n" +
+                        "                <li>" + x.getAutor() + "</li>\n" +
+                        "                <li>" + x.getResumen() + "Titulo</li>\n" +
+                        "                <li><A HREF=\"" + request.getServletContext().getRealPath("./files/downloads/" + x.getFile()) +"\">Descarga</a>" +
+                        "            </ul>\n" +
+                        "</div>"
                 );
             }
 
@@ -101,7 +147,6 @@ public class CatalogServlet extends HttpServlet {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-
     }
 
     @Override

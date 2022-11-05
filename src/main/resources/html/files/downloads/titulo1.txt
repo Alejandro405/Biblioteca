@@ -9,4 +9,5 @@ Now, let’s consider we have a requirement to call a servlet from another servl
 forward() method in RequestDispatcher(I).
 sendRedirect() method in HttpServletResponse(I)
 RequestDispatcher Interface
-Servlets provide RequestDispatcher in javax.servlet package. It defines an object to dispatch the client request from one servlet to another servlet on the same server. Basically, this can be used to receive the client request object and send that object to any other resource such as Servlet, JSP, HTML file, etc. We can get the RequestDispatcher object using the below syntax:
+Servlets provide RequestDispatcher in javax.servlet package. It defines an object to dispatch the client request from one servlet to another servlet on the same server. Basically,
+this can be used to receive the client request object and send that object to any other resource such as Servlet, JSP, HTML file, etc. We can get the RequestDispatcher object using the below syntax:
