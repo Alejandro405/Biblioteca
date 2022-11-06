@@ -132,13 +132,14 @@ public class CatalogServlet extends HttpServlet {
                         "            <ul>\n" +
                         "                <li>" + x.getAutor() + "</li>\n" +
                         "                <li>" + x.getResumen() + "Titulo</li>\n" +
-                        "                <li><A HREF=\"" + request.getServletContext().getRealPath("./files/downloads/" + x.getFile()) +"\">Descarga</a>" +
+                        "                <li> " + "<a href=\"/download?file=" + x.getFile() + "\"> Descarga Fichero </a>" + "</li>" +
                         "            </ul>\n" +
                         "</div>"
                 );
             }
 
-            // "                <li><A HREF=\"" + downloadsDirectory.toPath() + "\\"+ x.getFile() +"\">Descarga</a>"
+            // <a href="download?file=">Login</a>
+            //<A HREF=\"" + request.getServletContext().getRealPath("./files/downloads/" + x.getFile()) +"\">Descarga</a>"
 
             out.print(
                     "</body>\n" +
