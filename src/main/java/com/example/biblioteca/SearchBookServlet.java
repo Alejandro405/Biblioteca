@@ -69,7 +69,7 @@ public class SearchBookServlet extends HttpServlet {
                         "          <p>Usuario: Franco\n" +
                         "        </li>\n" +
                         "        <li>\n" +
-                        "          <a href=\"/download?file\"> Descarga Fichero </a>\n" +
+                        "          <a href=\"/logout\"> Cerrar Sesión </a>\n" +
                         "        </li>\n" +
                         "        <li>\n" +
                         "          <form method=\"get\" action=\"http://localhost:8080/Biblioteca_war_exploded/search\">\n" +
@@ -81,7 +81,8 @@ public class SearchBookServlet extends HttpServlet {
                         "        </li>\n" +
                         "      </ul>\n" +
                         "    </nav>\n" +
-                        "    <h1>Resultados de la búsqueda:</h1>"
+                        "  </header>\n" +
+                        "  <h1>Catálogo Digital</h1>"
         );
 
         for (Libro x : results) {
@@ -92,7 +93,7 @@ public class SearchBookServlet extends HttpServlet {
                     "            <ul>\n" +
                     "                <li>" + x.getAutor() + "</li>\n" +
                     "                <li>" + x.getResumen() + "Titulo</li>\n" +
-                    "                <li> " + "<a href=\"/download?file=" + x.getFile() + "\"> Descarga Fichero </a>" + "</li>" +
+                    "                <li> " + "<a href=\"http://localhost:8080/Biblioteca_war_exploded/download?file=" + x.getFile() + "\"> Descarga Fichero </a>" + "</li>" +
                     "            </ul>\n" +
                     "</div>"
             );
@@ -102,8 +103,8 @@ public class SearchBookServlet extends HttpServlet {
         //<A HREF=\"" + request.getServletContext().getRealPath("./files/downloads/" + x.getFile()) +"\">Descarga</a>"
 
         response.getWriter().print(
-                "</body>\n" +
-                "</html>"
+                "</Body>\n" +
+                        "</Html>"
         );
     }
 

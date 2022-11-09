@@ -46,7 +46,7 @@
           <p>Usuario: Franco
         </li>
         <li>
-          <a href="/download?file"> Descarga Fichero </a>
+          <a href="/logout"> Descarga Fichero </a>
         </li>
         <li>
           <form method="get" action="http://localhost:8080/Biblioteca_war_exploded/search">
@@ -60,5 +60,14 @@
     </nav>
   </header>
   <h1>Cat'alogo Digital</h1>
+  <div>
+    <h2>x.getTitulo() </h2>
+            <p>
+                <ul>
+                    <li> x.getAutor() </li>
+                    <li>x.getResumen() </li>
+                    <li> <a href="/download?file=x.getFile()" > Descarga Fichero </a></li>
+                </ul>
+  </div>
 </Body>
 </Html>

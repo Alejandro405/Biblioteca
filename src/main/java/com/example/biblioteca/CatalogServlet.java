@@ -116,7 +116,7 @@ public class CatalogServlet extends HttpServlet {
                             "          <p>Usuario: Franco\n" +
                             "        </li>\n" +
                             "        <li>\n" +
-                            "          <a href=\"/download?file\"> Descarga Fichero </a>\n" +
+                            "          <a href=\"/logout\"> Descarga Fichero </a>\n" +
                             "        </li>\n" +
                             "        <li>\n" +
                             "          <form method=\"get\" action=\"http://localhost:8080/Biblioteca_war_exploded/search\">\n" +
@@ -128,7 +128,8 @@ public class CatalogServlet extends HttpServlet {
                             "        </li>\n" +
                             "      </ul>\n" +
                             "    </nav>\n" +
-                            "    <h1>Cat'alogo Digital</h1>"
+                            "  </header>\n" +
+                            "  <h1>Cat'alogo Digital</h1>"
             );
 
             for (Libro x : librosRepo.getLibros()) {
@@ -139,7 +140,7 @@ public class CatalogServlet extends HttpServlet {
                         "            <ul>\n" +
                         "                <li>" + x.getAutor() + "</li>\n" +
                         "                <li>" + x.getResumen() + "Titulo</li>\n" +
-                        "                <li> " + "<a href=\"/download?file=" + x.getFile() + "\"> Descarga Fichero </a>" + "</li>" +
+                        "                <li> " + "<a href=\"http://localhost:8080/Biblioteca_war_exploded/download?file=" + x.getFile() + "\"> Descarga Fichero </a>" + "</li>" +
                         "            </ul>\n" +
                         "</div>"
                 );

@@ -19,12 +19,13 @@ public class DownloadServlet extends HttpServlet {
         String fileParth = "C:\\";
 
         String fileName = request.getParameter("file");
-        String filepath2 = request.getServletContext().getRealPath("./" + fileName);
+        String filepath2 = request.getServletContext().getRealPath("./");
 
         response.setContentType("text/plain");
         response.setHeader("Content-Disposition", "attachment; filename\"" + fileName + "\"");
 
-        try (FileInputStream srcData = new FileInputStream(fileParth + fileName)) {
+        //C:\Users\Usuario\IdeaProjects\Biblioteca\target\Biblioteca-1.0-SNAPSHOT\Resources\files\downloads\titulo1.txt
+        try (FileInputStream srcData = new FileInputStream(filepath2 + "\\Resources\\files\\downloads\\" + fileName)) {
             response.getWriter()
                     .write(new String(srcData.readAllBytes(), StandardCharsets.UTF_8));
         }
