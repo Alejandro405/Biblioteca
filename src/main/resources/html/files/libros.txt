@@ -1,49 +1,49 @@
-Titulo1
-Juan Pinto
-titulo1.txt
-resumen1:blaslasdfasfasdf
+Jackal
+Erin E. Adams
+Jackal.txt
+Resumen:A young Black girl goes missing in the woods outside her white Rust Belt town. But she’s not the first—and she may not be the last. . . .
 .
-Titulo2
-Álvaro Gracía
-titulo2.txt
-resumen2:blaslasdfasfasdf
+The Song of the Cell An Exploration of Medicine and the New Human
+Siddhartha Mukherjee
+The Song of the Cell An Exploration of Medicine and the New Human.txt
+Resumen:From the author of The Emperor of All Maladies, winner of the Pulitzer Prize, and The Gene, a #1 New York Times bestseller, comes his most spectacular book yet, an exploration of medicine and our radical new ability to manipulate cells. Rich with Mukherjee’s revelatory and exhilarating stories of scientists, doctors, and the patients whose lives may be saved by their work, The Song of the Cell is the third book in this extraordinary writer’s exploration of what it means to be human.
 .
-Titulo3
-Juan Pinto
-titulo3.txt
-resumen3:blaslasdfasfasdf
+Madly, Deeply The Diaries of Alan Rickman
+Alan Rickman, Emma Thompson
+Madly, Deeply The Diaries of Alan Rickman.txt
+Resumen:Madly Deeply is a rare invitation into the mind of Alan Rickman—one of the most magnetic, beloved performers of our time.
 .
-Titulo4
-Juan Pinto
-titulo4.txt
-resumen4:blaslasdfasfasdf
+Dracula
+Bram Stoker
+Dracula.txt
+Resumen:When Jonathan Harker visits Transylvania to help Count Dracula with the purchase of a London house, he makes a series of horrific discoveries about his client. Soon afterwards, various bizarre incidents unfold in England: an apparently unmanned ship is wrecked off the coast of Whitby; a young woman discovers strange puncture marks on her neck; and the inmate of a lunatic asylum raves about the 'Master' and his imminent arrival.
 .
-Titulo5
-Juan Pinto
-titulo5.txt
-resumen5:blaslasdfasfasdf
+Black Holes: The Key to Understanding Everything
+Brian Cox, Jeffrey R. Forshaw
+Black Holes: The Key to Understanding Everything.txt
+Resumen:A brilliant exploration of the most exotic objects in the universe by Professor Brian Cox and Professor Jeff Forshaw.
 .
-Titulo6
-Juan Pinto
-titulo6.txt
-resumen6:blaslasdfasfasdf
+Lavender House
+Lev A.C. Rosen
+Lavender House.txt
+Resumen:A delicious story from a new voice in suspense, Lev AC Rosen's Lavender House is Knives Out with a queer historical twist.
 .
-Titulo7
-Juan Pinto
-titulo7.txt
-resumen7:blaslasdfasfasdf
+Me
+Elton John
+Me.txt
+Resumen:In his only official autobiography, music icon Elton John writes about his extraordinary life, which is also the subject of the film Rocketman.
 .
-Titulo8
-Juan Pinto
-titulo8.txt
-resumen8:blaslasdfasfasdf
+The Little Prince
+Antoine de Saint-Exupéry, Richard Howard (Translator)
+The Little Prince.txt
+Resumen:A pilot stranded in the desert awakes one morning to see, standing before him, the most extraordinary little fellow. "Please," asks the stranger, "draw me a sheep." And the pilot realizes that when life's events are too difficult to understand, there is no choice but to succumb to their mysteries. He pulls out pencil and paper... And thus begins this wise and enchanting fable that, in teaching the secret of what is really important in life, has changed forever the world for its readers.
 .
-Titulo9
-Juan Pinto
-titulo9.txt
-resumen9:blaslasdfasfasdf
+The Happiest Man on Earth
+Eddie Jaku
+The Happiest Man on Earth.txt
+Resumen:Eddie Jaku always considered himself a German first, a Jew second. He was proud of his country. But all of that changed in November 1938, when he was beaten, arrested and taken to a concentration camp.
 .
-Titulo10
-Juan Pinto
-titulo10.txt
-resumen10:blaslasdfasfasdf
+The Chaos Machine: The Inside Story of How Social Media Rewired Our Minds and Our World
+Max Fisher
+The Chaos Machine.txt
+Resumen:From a New York Times investigative reporter and Pulitzer Prize finalist, “an essential book for our times” (Ezra Klein), tracking the high-stakes inside story of how Big Tech’s breakneck race to drive engagement—and profits—at all costs fractured the world

@@ -13,7 +13,7 @@ import java.util.Set;
 import java.util.stream.Collectors;
 
 public class LibrosRepo {
-    private static File libros = new File("C:\\Users\\Usuario\\IdeaProjects\\Biblioteca\\src\\main\\java\\com\\example\\biblioteca\\repo\\libros.txt");
+    private static File libros = new File("C:\\Users\\Usuario\\IdeaProjects\\Biblioteca\\src\\main\\resources\\html\\files\\libros.txt");
 
     private final Set<Libro> librosApp;
 

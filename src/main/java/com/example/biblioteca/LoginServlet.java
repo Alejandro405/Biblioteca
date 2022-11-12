@@ -43,7 +43,7 @@ public class LoginServlet extends HttpServlet {
 
         try {
             if (userRepo.get(usuario).equals(new Usuario(usuario, pass))){
-                request.getSession(true).setAttribute("logg", "TRUE");
+                request.getSession(true).setAttribute("logg", usuario);
                 request.getRequestDispatcher("catalogo").forward(request, response);
 
                 //response.getWriter().print(Files.readString(htmlCatalogo.toPath()));

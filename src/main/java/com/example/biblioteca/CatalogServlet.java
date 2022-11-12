@@ -26,6 +26,7 @@ public class CatalogServlet extends HttpServlet {
     private void mostrarPaginaBis(HttpServletRequest request, HttpServletResponse response) {
         try {
             PrintWriter out = response.getWriter();
+
             LibrosRepo librosRepo = new LibrosRepo();
             out.print(
                     "<!DOCTYPE html>\n" +
@@ -35,9 +36,7 @@ public class CatalogServlet extends HttpServlet {
                             "    <title>Title</title>\n" +
                             "</head>\n" +
                             "<body>\n" +
-                            "    <h1>Catálogo Digital</h1>\n" +
-                            "    <div>\n" +
-                            "        <h2>Libro 1:</h2>"
+                            "<h1>Catálogo Digital</h1>\n"
             );
 
             for (Libro x : librosRepo.getLibros()) {
@@ -67,6 +66,7 @@ public class CatalogServlet extends HttpServlet {
     private void mostrarPaginaDescarga(HttpServletRequest request, HttpServletResponse response) {
         try (PrintWriter out = response.getWriter()){
             LibrosRepo librosRepo = new LibrosRepo();
+            out.flush();
             out.print(
                     "<!Doctype Html>\n" +
                             "<html lang=\"en\">\n" +
@@ -113,10 +113,10 @@ public class CatalogServlet extends HttpServlet {
                             "    <nav>\n" +
                             "      <ul>\n" +
                             "        <li>\n" +
-                            "          <p>Usuario: Franco\n" +
+                            "          <p>Usuario: " + request.getSession().getAttribute("logg") + "\n" +
                             "        </li>\n" +
                             "        <li>\n" +
-                            "          <a href=\"/logout\"> Descarga Fichero </a>\n" +
+                            "          <a href=\"http://localhost:8080/Biblioteca_war_exploded/logout\"> Cerrar Sesión </a>\n" +
                             "        </li>\n" +
                             "        <li>\n" +
                             "          <form method=\"get\" action=\"http://localhost:8080/Biblioteca_war_exploded/search\">\n" +
@@ -129,7 +129,7 @@ public class CatalogServlet extends HttpServlet {
                             "      </ul>\n" +
                             "    </nav>\n" +
                             "  </header>\n" +
-                            "  <h1>Cat'alogo Digital</h1>"
+                            "  <h1>Catálogo Digital</h1>"
             );
 
             for (Libro x : librosRepo.getLibros()) {

@@ -33,7 +33,11 @@ public class RegisterServlet extends HttpServlet {
         String rol = Arrays.toString(request.getParameterValues("rol"));
         response.setContentType("text/html");
         response.setCharacterEncoding("utf-8");
+
         File htmlReg = new File(
+                request.getServletContext().getRealPath("./WEB-INF/classes/html/RegisterForm.html")
+        );
+        File htmlLogin = new File(
                 request.getServletContext().getRealPath("./WEB-INF/classes/html/LoginForm.html")
         );
 
@@ -43,8 +47,8 @@ public class RegisterServlet extends HttpServlet {
         } else if (userRepo.contains(nick)){
             response.getWriter().print(Files.readString(htmlReg.toPath()) + "\n<p style=\"color:#FF0000\";>Usuario ya registrado</p>");
         } else {
-            response.getWriter().print(Files.readString(htmlReg.toPath()));
-            userRepo.addUser(new Usuario(nick, pass, nombre, rol));
+            response.getWriter().print(Files.readString(htmlLogin.toPath()));
+            userRepo.addUser(new Usuario(nick, pass));
             userRepo.saveUsers();
         }
     }
