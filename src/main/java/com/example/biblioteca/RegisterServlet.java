@@ -45,7 +45,7 @@ public class RegisterServlet extends HttpServlet {
         if (nick.equals("") || pass.equals("")) {
             response.getWriter().print(Files.readString(htmlReg.toPath()) + "\n<p style=\"color:#FF0000\";>Usuario y contrasenia campos obligatorios</p>");
         } else if (userRepo.contains(nick)){
-            response.getWriter().print(Files.readString(htmlReg.toPath()) + "\n<p style=\"color:#FF0000\";>Usuario ya registrado</p>");
+            response.getWriter().print(Files.readString(htmlReg.toPath()) + "\n<p style=\"color:#FF0000\";> </p>");
         } else {
             response.getWriter().print(Files.readString(htmlLogin.toPath()));
             userRepo.addUser(new Usuario(nick, pass));
