@@ -2,24 +2,50 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./css/RegisterForm.css">
+
     <title>Title</title>
 </head>
 <body>
-    <div style="text-align: center;">
-        <img src="pict1.png">
-    </div>
-    <div>
-        <div >
-            <h2>Register</h2>
+    <div class="signupForm">
+        <div class="ui-icon-image"  style="text-align: center; margin-right: 50px; height: 250px;">
+            <img src="./imagenes/th-1537565788.jpg">
         </div>
+        <FORM class="form" METHOD="POST" ACTION="http://localhost:8080/Biblioteca_war_exploded/register/${}">
+            <h2 class="title">Register</h2>
 
-        <FORM METHOD="POST" ACTION="http://localhost:8080/Biblioteca_war_exploded/register/${}">
-            Usuario<b>*</b>: <INPUT TYPE="text" NAME="nick" size=25>  <br>
-            Contraseña<b>*</b>: <INPUT TYPE="password" NAME="pass" size=10 > <br>
-
-            <div style="text-align: center;">
-                <input type="submit" name="Enviar" value=Enviar>
+            <div class="inputContainer">
+                <input class="input" TYPE="text" NAME="nick" size=25 placeholder="a">
+                <label class="label">Nick de Usuario<b>*</b></label>
             </div>
+            <div class="inputContainer">
+                <input class="input" TYPE="text" NAME="nombre" size=10 placeholder="a">
+                <label class="label">Nombre</label>
+            </div>
+            <div class="inputContainer">
+                <input class="input" TYPE="text" NAME="apellidos" size="20" placeholder="a">
+                <label class="label">Apellidos</label>
+            </div>
+            <div class="inputContainer">
+                <input class="input" TYPE="password" NAME="pass" size=10 placeholder="a">
+                <label class="label">Contraseña<b>*</b></label>
+            </div>
+            <div class="inputContainer">
+                <input class="input" TYPE="password" NAME="pass" size=10 placeholder="a">
+                <label class="label">Código de Recuperación<b>*</b></label>
+            </div>
+            <div class="inputContainer">
+                <label class="alert-info" style="color: #769eba" for="rol">Rol</label>
+                <select class="select" name="roles" id="rol" >
+                    <option value="estudiante">Estudiante</option>
+                    <option value="divulgador">Divulgador</option>
+                    <option value="docente">Docente</option>
+                </select>
+            </div>
+
+
+            <input class="submit" type="submit" name="Enviar" value=Enviar>
 
 
         </FORM>
